@@ -1,6 +1,7 @@
 package org.hellocontroller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -8,12 +9,18 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/pages")
 public class HelloController {
 
-	@RequestMapping("/welcome")
-	public ModelAndView helloWorld() {
+	// Paste in a browser:
+	// http://localhost:9080/TestSpringProject/pages/welcome/Belarus/Igor
+
+	@RequestMapping("/welcome/{countryName}/{userName}")
+	public ModelAndView helloWorld(
+			@PathVariable("countryName") String countryName,
+	        @PathVariable("userName") String userName) {
 
 		ModelAndView modelAndView = new ModelAndView("HelloPage");
 		modelAndView.addObject("welcomeMessage",
-		        "Hi, user, welcome to the first spring application");
+				"Hi, user, welcome to the first spring application"
+		                + countryName + " " + userName);
 
 		return modelAndView;
 	}
@@ -23,8 +30,8 @@ public class HelloController {
 
 		ModelAndView modelAndView = new ModelAndView("HelloPage");
 		modelAndView
-		.addObject("welcomeMessage",
-				"Hi, user, welcome to the first spring application. Method HI.");
+		        .addObject("welcomeMessage",
+		                "Hi, user, welcome to the first spring application. Method HI.");
 
 		return modelAndView;
 	}
