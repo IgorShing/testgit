@@ -9,16 +9,17 @@
 								http://www.springframework.org/schema/context/spring-context-3.1.xsd
 								http://www.springframework.org/schema/mvc
 								http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
-								
-<!-- 	<mvc:annotation-driven> -->
+	
+
+	<mvc:annotation-driven/>
+	
+	<context:component-scan base-package="org.hellocontroller"/>
+	
 	 	<bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
-	 	
-	 	<bean name="/welcome.html" class="org.hellocontroller.HelloController" /> 
-	 	
 	 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	 	
 	 		<property name="prefix">
-	 		 	<value>/WEB-INF/</value>
+	 		 	<value>/WEB-INF/pages/</value>
 	 		</property>
 	 	
 	 		<property name="suffix">
@@ -26,32 +27,6 @@
 	 		</property>
 	 	
 	 	</bean>
-	 	
-	 	
-	 	
-<!--     </mvc:annotation-driven> -->
-
-	<context:component-scan base-package="org.hellocontroller"/>
-
 </beans>
 
-
-
-<!-- 	<mvc:annotation-driven>
-		<mvc:message-converters>
-		<bean
-class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
-<bean
-class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
-<property name="marshaller" ref="castorMarshaller"/>
-<property name="unmarshaller" ref="castorMarshaller"/>
-</bean>
-</mvc:message-converters>
-</mvc:annotation-driven>
-<context:component-scan
-base-package="com.apress.prospring3.ch16.web.restful.controller"/>
-<bean id="castorMarshaller"
-class="org.springframework.oxm.castor.CastorMarshaller">
-<property name="mappingLocation" value="classpath:oxm-mapping.xml"/>
-</bean>
-</beans> -->
+<!-- http://stackoverflow.com/questions/18683847/no-mapping-found-for-http-request-with-uri-in-dispatcherservlet-with-name -->
