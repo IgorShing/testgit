@@ -23,5 +23,8 @@
 				 	<td>${student1.studentHobby}</td>
 			 </tr>
 		</table>
+		
+		<h3>Date of access: ${dateOfAccess}</h3>
+		
 </body>
 </html>

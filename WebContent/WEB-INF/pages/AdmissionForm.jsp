@@ -10,6 +10,8 @@
 
 <body>
 	<h1>Student Admission Form For Engineering Courses</h1>
+	
+	<h1>${headerMessage}</h1>
 
 	<form action="/TestSpringProject/pages/submitAdmissionForm.html" method="post">
 		<p>
