@@ -18,7 +18,6 @@
 				 	<td>Student's name</td>
 				 	<td>${student1.studentName}</td>
 			 </tr>
-	
 			 <tr>
 					<td>Student's hobby</td>
 				 	<td>${student1.studentHobby}</td>

@@ -9,7 +9,6 @@
 <body>
 
 	<h1>First Spring Application Demo</h1>
-	
   	<h2>${welcomeMessage}</h2>
 	
 </body>
