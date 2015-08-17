@@ -14,6 +14,7 @@
 	<mvc:annotation-driven/>
 	
 	<context:component-scan base-package="org.hellocontroller"/>
+	<context:component-scan base-package="org.student"/>
 	
 	 	<bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 	 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >

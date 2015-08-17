@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloController {
 
 	// Paste in a browser:
+
 	// http://localhost:9080/TestSpringProject/pages/welcome/Belarus/Igor
 
 	@RequestMapping("/welcome/{countryName}/{userName}")
@@ -23,7 +24,7 @@ public class HelloController {
 		ModelAndView modelAndView = new ModelAndView("HelloPage");
 		modelAndView.addObject("welcomeMessage",
 				"Hi, user, welcome to the first spring application: "
-		                + countryName + " " + userName);
+						+ countryName + " " + userName);
 
 		return modelAndView;
 	}
@@ -33,8 +34,8 @@ public class HelloController {
 
 		ModelAndView modelAndView = new ModelAndView("HelloPage");
 		modelAndView
-		        .addObject("welcomeMessage",
-		                "Hi, user, welcome to the first spring application. Method HI.");
+		.addObject("welcomeMessage",
+				"Hi, user, welcome to the first spring application. Method HI.");
 
 		return modelAndView;
 	}
