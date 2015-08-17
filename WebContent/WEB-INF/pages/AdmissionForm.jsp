@@ -14,13 +14,33 @@
 	<h1>${headerMessage}</h1>
 
 	<form action="/TestSpringProject/pages/submitAdmissionForm.html" method="post">
-		<p>
-			Student's Name: <input type="text" name="studentName" /> 
-		</p>
-		
-		<p>
-			Student's Hobby: <input type="text" name="studentHobby" />
-		</p>
+	
+		<table>
+			 <tr>
+				 <td>Student's Name: <input type="text" name="studentName" /> </td>
+			 </tr>
+			 <tr>
+				 <td>Student's Hobby: <input type="text" name="studentHobby" /></td>
+			 </tr>
+			 <tr>
+				 <td>Student's Mobile Phone: <input type="text" name="studentMobile" /></td>
+			 </tr>
+			 <tr>
+				 <td>Student's Date of Birth: <input type="text" name="studentDateOfBirth" /></td>
+			 </tr>
+			 
+			 <tr>
+				 <td>Student's skill set:</td>
+				 <td>
+				 	<select name="studentSkills" multiple>
+				 		<option value="Java Core">Java Core</option>
+				 		<option value="Maven">Maven</option>
+				 		<option value="Spring MVC">Spring MVC</option>
+				 		<option value="Spring Core">Spring Core</option>
+				 	</select>
+				 </td>
+			 </tr>
+		</table>
 			<input type="submit" value="Submit this form by clicking here" />
 	</form> 
 </body>

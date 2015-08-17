@@ -22,6 +22,26 @@
 					<td>Student's hobby</td>
 				 	<td>${student1.studentHobby}</td>
 			 </tr>
+			 
+			 <tr>
+					<td>Student's mobile phone</td>
+				 	<td>${student1.studentMobile}</td>
+			 </tr>
+			 
+			 <tr>
+					<td>Student's date of birth</td>
+				 	<td>${student1.studentDateOfBirth}</td>
+			 </tr>
+			 
+			 <tr>
+					<td>Student's date of birth</td>
+				 	<td>${student1.studentDateOfBirth}</td>
+			 </tr>
+			 
+			 <tr>
+					<td>Student's skills</td>
+				 	<td>${student1.studentSkills}</td>
+			 </tr>
 		</table>
 		
 		<h3>Date of access: ${dateOfAccess}</h3>
