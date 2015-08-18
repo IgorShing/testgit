@@ -6,6 +6,7 @@ import java.util.GregorianCalendar;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,7 +43,13 @@ public class StudentAdmissionController {
 	 * @return
 	 */
 	@RequestMapping(value = "/submitAdmissionForm", method = RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@ModelAttribute("student1") Student student1){
+	public ModelAndView submitAdmissionForm(@ModelAttribute("student1") Student student1, BindingResult result){
+
+		if (result.hasErrors()){
+			ModelAndView modelAndView = new ModelAndView("AdmissionForm");
+			return modelAndView;
+		}
+
 
 		calendar.set(Calendar.HOUR_OF_DAY, 0); //anything 0 - 23
 		calendar.set(Calendar.MINUTE, 0);
