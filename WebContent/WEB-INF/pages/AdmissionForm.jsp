@@ -16,18 +16,10 @@
 	<form action="/TestSpringProject/pages/submitAdmissionForm.html" method="post">
 	
 		<table>
-			 <tr>
-				 <td>Student's Name: <input type="text" name="studentName" /> </td>
-			 </tr>
-			 <tr>
-				 <td>Student's Hobby: <input type="text" name="studentHobby" /></td>
-			 </tr>
-			 <tr>
-				 <td>Student's Mobile Phone: <input type="text" name="studentMobile" /></td>
-			 </tr>
-			 <tr>
-				 <td>Student's Date of Birth: <input type="text" name="studentDateOfBirth" /></td>
-			 </tr>
+			 <tr> <td>Student's Name: <input type="text" name="studentName" /> </td> </tr>
+			 <tr> <td>Student's Hobby: <input type="text" name="studentHobby" /></td> </tr>
+			 <tr> <td>Student's Mobile Phone: <input type="text" name="studentMobile" /></td> </tr>
+			 <tr> <td>Student's Date of Birth: <input type="text" name="studentDateOfBirth" /></td> </tr>
 			 
 			 <tr>
 				 <td>Student's skill set:</td>
@@ -41,6 +33,18 @@
 				 </td>
 			 </tr>
 		</table>
+		
+		<!-- For the address -->
+		<table>
+			 <tr> <td>Student's address </td> </tr>
+			 <tr>
+				 <td>Country: <input type="text" name="studentAddress.country" /></td>
+				 <td>City: <input type="text" name="studentAddress.city" /></td>
+				 <td>Street: <input type="text" name="studentAddress.street" /></td>
+				 <td>Pincode: <input type="text" name="studentAddress.pincode" /></td>
+			 </tr>
+		</table>
+		
 			<input type="submit" value="Submit this form by clicking here" />
 	</form> 
 </body>

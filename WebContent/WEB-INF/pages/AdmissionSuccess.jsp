@@ -8,7 +8,6 @@
 </head>
 <body>
 		<h1>Congratulations! The Engineering College has processed your application form successfully!</h1>
-		
 		<h1>${headerMessage}</h1>
 				
 		<h2>Details submitted by you:</h2>
@@ -41,6 +40,16 @@
 			 <tr>
 					<td>Student's skills</td>
 				 	<td>${student1.studentSkills}</td>
+			 </tr>
+			 
+			 <tr>
+					<td>Student Address</td>
+				 	<td>
+					 	Country: ${student1.studentAddress.country},
+					 	City: ${student1.studentAddress.city},
+					 	Street: ${student1.studentAddress.street},
+					 	Pincode: ${student1.studentAddress.pincode}.
+				 	</td>
 			 </tr>
 		</table>
 		

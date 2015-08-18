@@ -12,6 +12,16 @@ public class Student {
 	private Date	          studentDateOfBirth;
 	private ArrayList<String>	studentSkills;
 
+	private Address studentAddress;
+
+	public Address getStudentAddress() {
+		return studentAddress;
+	}
+
+	public void setStudentAddress(Address studentAddress) {
+		this.studentAddress = studentAddress;
+	}
+
 	public String getStudentName() {
 		return studentName;
 	}

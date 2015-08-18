@@ -8,7 +8,8 @@
 </head>
 <body>
 
-	<a href=http://localhost:9080/TestSpringProject/pages/admissionForm>
+	<!-- <a href=http://localhost:9080/TestSpringProject/pages/admissionForm> -->
+	<a href=http://localhost:8181/TestSpringProject/pages/admissionForm>
 	Admission form</a>
 </body>
 </html>
