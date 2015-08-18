@@ -24,7 +24,7 @@
 			 <tr> <td>Student's Name: <input type="text" name="studentName" /> </td> </tr>
 			 <tr> <td>Student's Hobby: <input type="text" name="studentHobby" /></td> </tr>
 			 <tr> <td>Student's Mobile Phone: <input type="text" name="studentMobile" /></td> </tr>
-			 <tr> <td>Student's Date of Birth: <input type="text" name="studentDateOfBirth" /></td> </tr>
+			 <tr> <td>Student's Date of Birth (yyyy****mm****dd): <input type="text" name="studentDateOfBirth" /></td> </tr>
 			 
 			 <tr>
 				 <td>Student's skill set:</td>

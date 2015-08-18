@@ -1,9 +1,11 @@
 package org.student;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,6 +26,11 @@ public class StudentAdmissionController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
 		binder.setDisallowedFields(new String[] {"studentMobile"});
+
+		// New date format
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy****mm****dd");
+		binder.registerCustomEditor(Date.class, "studentDateOfBirth", new CustomDateEditor(dateFormat, false));
+		binder.registerCustomEditor(String.class, "studentName", new StudentNameEditor());
 	}
 
 	@RequestMapping(value = "/admissionForm", method = RequestMethod.GET)
