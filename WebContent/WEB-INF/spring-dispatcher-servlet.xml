@@ -18,17 +18,20 @@
 	<context:component-scan base-package="org.system"/>
 	
 	 	<bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
-	 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	 	
+	 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 	 		<property name="prefix">
 	 		 	<value>/WEB-INF/pages/</value>
 	 		</property>
-	 	
 	 		<property name="suffix">
 	 		 	<value>.jsp</value>
 	 		</property>
-	 	
 	 	</bean>
+	 	
+	 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	 		<property name="basename" value="WEB-INF/studentmessages"/>
+	 	</bean>
+	 	
 </beans>
 
 <!-- http://stackoverflow.com/questions/18683847/no-mapping-found-for-http-request-with-uri-in-dispatcherservlet-with-name -->
