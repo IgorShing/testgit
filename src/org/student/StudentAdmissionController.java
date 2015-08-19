@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,7 +60,7 @@ public class StudentAdmissionController {
 	 * @return
 	 */
 	@RequestMapping(value = "/submitAdmissionForm", method = RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@ModelAttribute("student1") Student student1, BindingResult result){
+	public ModelAndView submitAdmissionForm(@Valid @ModelAttribute("student1") Student student1, BindingResult result){
 
 		if (result.hasErrors()){
 			ModelAndView modelAndView = new ModelAndView("AdmissionForm");
