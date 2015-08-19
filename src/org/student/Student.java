@@ -9,7 +9,7 @@ public class Student {
 
 	private String	          studentName;
 
-	@Size(min=2, max=30)
+	@Size(min=2, max=30, message = "Please, enter a value for studentHobby field between {min} and {max} characters!")
 	private String	          studentHobby;
 
 	private Long	          studentMobile;
