@@ -13,7 +13,7 @@ public class Student {
 	@Pattern(regexp="[^0-9]*")
 	private String	          studentName;
 
-	@Size(min=2, max=30, message = "Please, enter a value for studentHobby field between {min} and {max} characters!")
+	@Size(min=2, max=30) @IsValidHobby
 	private String	          studentHobby;
 
 	@Max(2222)
