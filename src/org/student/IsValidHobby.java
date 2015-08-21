@@ -16,6 +16,8 @@ import javax.validation.Payload;
 
 public @interface IsValidHobby {
 
+	String listOfValidHoobies() default "Music|Football|Cricket|Hockey|Cars";
+
 	String message() default "Please, provide a valid hobby: Cricket, Music, Football and Hockey";
 
 	Class<?>[] groups() default {};
