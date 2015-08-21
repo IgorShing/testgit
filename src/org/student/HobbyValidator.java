@@ -5,11 +5,12 @@ import javax.validation.ConstraintValidatorContext;
 
 public class HobbyValidator implements ConstraintValidator<IsValidHobby, String>{
 
+	@SuppressWarnings("unused")
 	private String listOfValidHobbies;
 
 	@Override
 	public void initialize(IsValidHobby isValidHobby){
-		listOfValidHobbies = isValidHobby.listOfValidHoobies();
+		this.listOfValidHobbies = isValidHobby.listOfValidHoobies();
 	}
 
 	@Override

@@ -17,6 +17,10 @@
 	<context:component-scan base-package="org.student"/>
 	<context:component-scan base-package="org.system"/>
 	
+		<mvc:interceptors>
+			<bean class="org.system.DayOfWeekBasedAccessInterceptor" />
+		</mvc:interceptors>
+	
 	 	<bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 	 	
 	 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
